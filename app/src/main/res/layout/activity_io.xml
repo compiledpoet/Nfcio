@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IOActivity"
+    android:background="#f2f2f2"
+
+    >
+
+    <Button
+        android:id="@+id/btn_add_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:background="@color/colorAccent"
+        android:layout_alignParentEnd="true"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spn_type"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/btn_add_record"
+        android:layout_alignTop="@+id/btn_add_record"
+        android:layout_toStartOf="@+id/btn_add_record">
+
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <EditText
+        android:id="@+id/edt_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/spn_type"
+        android:layout_toStartOf="@+id/spn_type"
+        android:hint="Type record here"
+        android:layout_alignTop="@+id/btn_add_record"
+        android:layout_marginStart="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorAccent"
+        android:textColor="#FFF"
+        />
+
+    <ListView
+        android:id="@+id/lst_w_records"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_write"
+        android:layout_below="@+id/btn_add_record"></ListView>
+
+    <TextView
+        android:id="@+id/txt_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Read From Tag:"
+        android:layout_below="@+id/btn_write"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textColor="#212121"/>
+
+    <ListView
+        android:id="@+id/lst_r_records"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/txt_read"></ListView>
+
+
+</RelativeLayout>
